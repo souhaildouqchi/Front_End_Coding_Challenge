@@ -54,9 +54,9 @@ The final result of the project looks like :
 To setup the project you have to : 
 
 ```
-git clone 
+git clone https://github.com/souhaildouqchi/frontendcodingchallenge.git
 
-cd 
+cd frontendcodingchallenge
 
 npm install
 ```
