@@ -12,6 +12,7 @@ class FetchRepos extends Component {
 
   componentDidMount() {
     this.getRepo(); // get initial repos
+    window.addEventListener("scroll", this.LoadMore); // load more repos
   }
 
   getRepo = () => {
@@ -34,7 +35,26 @@ class FetchRepos extends Component {
         });
       });
   };
+  loadRepo = () => {
+    const { page } = this.state;
 
+    this.setState((prevState) => ({
+      page: prevState.page + page,
+      loading: true,
+    }));
+    this.getRepo();
+  };
+
+  LoadMore = () => {
+    const { loading } = this.state;
+
+    if (
+      window.pageYOffset + window.innerHeight >= window.innerHeight &&
+      !loading
+    ) {
+      this.loadRepo();
+    }
+  };
   render() {
     return (
       <div>
