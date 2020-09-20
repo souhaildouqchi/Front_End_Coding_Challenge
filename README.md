@@ -35,6 +35,7 @@ You can read more about the Github API over [here](https://developer.github.com/
 
 Here's what each element represents :
 
+
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/frontend-coding-challenge/master/row_explained.png)
 
 ## Screenshot 
